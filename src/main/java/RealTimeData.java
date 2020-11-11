@@ -215,6 +215,7 @@ public class RealTimeData {
             case ALARM: {
                 IStatus<AlarmData> status = type.getStatus();
                 realTimeData.setAlarmData(status.decode(byteBuf));
+                break;
             }
             case VOLTAGE: {
                 IStatus<SubSystemVoltageData> status = type.getStatus();

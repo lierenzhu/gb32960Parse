@@ -391,7 +391,7 @@ public class AlarmData implements IStatus {
         short deviceFailureTotal = byteBuf.readUnsignedByte();
         alarmData.setDeviceFailureCount(deviceFailureTotal);
         List<Long> deviceFailuresList = new ArrayList<>(deviceFailureTotal);
-        for (int i = 0; i <= deviceFailureTotal; i++) {
+        for (int i = 0; i < deviceFailureTotal; i++) {
             deviceFailuresList.add(byteBuf.readUnsignedInt());
         }
         alarmData.setDeviceFailureCodes(deviceFailuresList);
